@@ -10,7 +10,7 @@ const colors = {
 const Caja = ({setValor}) => {
     
     const [colorNumber, setColorNumber] = useState(0);
-    const [tempValue, setTempValue] = useState(0)
+    const [tempValue, setTempValue] = useState("")
     
     useEffect(() => {
       const intervalColor = setInterval(() => {
@@ -36,12 +36,14 @@ const Caja = ({setValor}) => {
     }
 
     function onChangeValue(event){
-        setTempValue(Number(event.target.value));
+        setTempValue(event.target.value);
     }
 
     function handleKeyPress (event) {
         if(event.key === 'Enter'){
-            if(tempValue < 0 || tempValue > 100) return;
+            if(Number.isNaN(Number(tempValue))) return;
+            const numValue = Number(tempValue)
+            if(numValue < 0 || numValue > 100) return;
             setValor(convertToRadiant(tempValue));
         }
     }
