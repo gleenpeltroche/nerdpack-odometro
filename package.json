@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "name": "test-front",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "nr1 nerdpack:serve",
+        "test": "exit 0"
+    },
+    "nr1": {
+        "uuid": "d17ae565-f5ba-4ae9-97d5-cbd4e9a306a7"
+    },
+    "dependencies": {
+        "prop-types": "15.7.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "not ie < 11",
+        "not dead"
+    ]
+}
